@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        String username = ((EditText) findViewById(R.id.etUsername)).getText().toString();
-        String password = ((EditText) findViewById(R.id.etPassword)).getText().toString();
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.login);
@@ -50,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        EditText usernameEditText = findViewById(R.id.etUsername);
+        EditText passwordEditText = findViewById(R.id.etPassword);
+        String username = usernameEditText.getText().toString().trim();
+        String password = passwordEditText.getText().toString().trim();
         LoginService loginService = new Retrofit.Builder().baseUrl("https://dummyjson.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build().create(LoginService.class);

@@ -16,7 +16,6 @@
         android:padding="16dp"
         android:gravity="center_vertical">
 
-        <!-- Título a la izquierda -->
         <TextView
             android:id="@+id/title"
             android:layout_width="0dp"
@@ -27,7 +26,6 @@
             android:textColor="@android:color/white"
             android:gravity="start" />
 
-        <!-- Botón de apagado a la derecha -->
         <ImageButton
             android:id="@+id/logout_button"
             android:layout_width="66dp"
@@ -44,7 +42,6 @@
         android:orientation="horizontal"
         android:padding="16dp">
 
-        <!-- Icono de género -->
         <ImageView
             android:id="@+id/user_icon"
             android:layout_width="50dp"
@@ -52,7 +49,6 @@
 
             android:src="@drawable/ic_female"/>
 
-        <!-- Nombre y correo -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -78,7 +74,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Sección del temporizador y descanso -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -86,7 +81,6 @@
         android:gravity="center_horizontal"
         android:paddingTop="16dp">
 
-        <!-- Texto pequeño de descanso -->
         <TextView
             android:id="@+id/break_time"
             android:layout_width="match_parent"
@@ -98,7 +92,6 @@
             android:textSize="20sp"
             android:gravity="right"/>
 
-        <!-- Timer principal -->
         <TextView
             android:id="@+id/timer"
             android:layout_width="wrap_content"
@@ -111,7 +104,6 @@
             android:textStyle="bold"/>
     </LinearLayout>
 
-    <!-- Sección del botón de iniciar/reiniciar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -119,7 +111,6 @@
         android:orientation="vertical"
         android:paddingTop="16dp">
 
-        <!-- Botón de iniciar/reiniciar (ícono) -->
         <ImageButton
             android:id="@+id/start_restart_button"
             android:layout_width="85dp"
