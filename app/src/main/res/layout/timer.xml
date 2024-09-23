@@ -1,6 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".PomodoroActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?attr/colorPrimary"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Título a la izquierda -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pomodoro PUCP"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:gravity="start" />
+
+        <!-- Botón de apagado a la derecha -->
+        <ImageButton
+            android:id="@+id/logout_button"
+            android:layout_width="66dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_logout"
+            android:contentDescription="boton"/>
+    </LinearLayout>
+
+    <!-- Sección de información del usuario -->
+    <LinearLayout
+        android:id="@+id/user_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Icono de género -->
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:src="@drawable/ic_female"/>
+
+        <!-- Nombre y correo -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre Apellido"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="correo@ejemplo.com"
+                android:textSize="14sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Sección del temporizador y descanso -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="16dp">
+
+        <!-- Texto pequeño de descanso -->
+        <TextView
+            android:id="@+id/break_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:paddingStart="16dp"
+            android:text="Descanso 05:00"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="right"/>
+
+        <!-- Timer principal -->
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25:00"
+            android:textSize="70sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Sección del botón de iniciar/reiniciar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <!-- Botón de iniciar/reiniciar (ícono) -->
+        <ImageButton
+            android:id="@+id/start_restart_button"
+            android:layout_width="85dp"
+            android:layout_height="59dp"
+            android:src="@drawable/ic_start"
+            android:contentDescription="boton"/>
+    </LinearLayout>
+
+</LinearLayout>
